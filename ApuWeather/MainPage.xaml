@@ -10,7 +10,7 @@
             <RowDefinition Height="170"/>
             <RowDefinition Height="85"/>
             <RowDefinition Height="85"/>
-            <RowDefinition Height="170"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -19,15 +19,16 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-            <Image x:Name="Background"
-               Source="Sunny.jpg"
+            <Image x:Name="background"
+               Source="sunny.jpg"
                Aspect="AspectFill"
-               Grid.RowSpan="4"/>
+               Grid.RowSpan="4"
+               Grid.ColumnSpan="3"/>
 
 
             <Frame x:Name="frameTemp"
                HeightRequest="135"
-               BackgroundColor="#55acb0c2"
+               BackgroundColor="#556c7ca6"
                CornerRadius="20"
                VerticalOptions="Center"
                Grid.Row="1"
@@ -37,7 +38,7 @@
 
             <Frame x:Name="frameRain"
                HeightRequest="80"
-               BackgroundColor="#55acb0c2"
+               BackgroundColor="#556c7ca6"
                CornerRadius="20"
                VerticalOptions="Center"
                Grid.Row="1"
@@ -47,7 +48,7 @@
 
             <Frame x:Name="frameSun"
                HeightRequest="80"
-               BackgroundColor="#55acb0c2"
+               BackgroundColor="#556c7ca6"
                CornerRadius="20"
                VerticalOptions="Center"
                Grid.Row="2"
@@ -57,7 +58,7 @@
 
             <Frame x:Name="frameWind"
                HeightRequest="80"
-               BackgroundColor="#55acb0c2"
+               BackgroundColor="#556c7ca6"
                CornerRadius="20"
                VerticalOptions="Center"
                Grid.Row="1"
@@ -67,7 +68,7 @@
 
             <Frame x:Name="frameMoon"
                HeightRequest="80"
-               BackgroundColor="#55acb0c2"
+               BackgroundColor="#556c7ca6"
                CornerRadius="20"
                VerticalOptions="Center"
                Grid.Row="2"
@@ -76,12 +77,13 @@
             </Frame>
 
             <Frame x:Name="frameEnd"
-               HeightRequest="80"
-               BackgroundColor="#55acb0c2"
+               HeightRequest="140"
+               BackgroundColor="#556c7ca6"
                CornerRadius="20"
                HorizontalOptions="Fill"
                VerticalOptions="Fill"
                Grid.Row="3"
+               Grid.ColumnSpan="3"
                Margin="5">
             </Frame>
 
