@@ -27,8 +27,8 @@
 
 
             <Frame x:Name="frameTemp"
-               HeightRequest="135"
-               BackgroundColor="#556c7ca6"
+               HeightRequest="170"
+               BackgroundColor="#80000000"
                CornerRadius="20"
                VerticalOptions="Center"
                Grid.Row="1"
@@ -38,47 +38,136 @@
 
             <Frame x:Name="frameRain"
                HeightRequest="80"
-               BackgroundColor="#556c7ca6"
+               BackgroundColor="#80000000"
                CornerRadius="20"
                VerticalOptions="Center"
                Grid.Row="1"
                Grid.Column="1"
                Margin="5">
+
+               
+               <VerticalStackLayout>
+
+                  <Label Text="Chuva"
+                         TextColor="White"
+                         FontSize="11"
+                         VerticalOptions="Start"
+                         HorizontalOptions="Center"
+                         FontAttributes="Bold"/>
+
+                  <Label Text="Chuva:"
+                         TextColor="White"
+                         FontSize="10"
+                         VerticalOptions="Center"
+                         HorizontalOptions="Start"/>
+
+                  <Label Text="Humidade:"
+                         TextColor="White"
+                         FontSize="10"
+                         VerticalOptions="End"
+                         HorizontalOptions="Start"/>
+
+               </VerticalStackLayout>  
+
             </Frame>
 
             <Frame x:Name="frameSun"
                HeightRequest="80"
-               BackgroundColor="#556c7ca6"
+               BackgroundColor="#80000000"
                CornerRadius="20"
                VerticalOptions="Center"
                Grid.Row="2"
                Grid.Column="1"
                Margin="5">
+
+              <VerticalStackLayout>
+
+                  <Label Text="Sol"
+                         TextColor="White"
+                         FontSize="11"
+                         VerticalOptions="Start"
+                         HorizontalOptions="Center"
+                         FontAttributes="Bold"/>
+
+                  <Label Text="Amanhecer:"
+                         TextColor="White"
+                         FontSize="10"
+                         VerticalOptions="Center"
+                         HorizontalOptions="Start"/>
+
+                  <Label Text="Anoitecer:"
+                         TextColor="White"
+                         FontSize="10"
+                         VerticalOptions="End"
+                         HorizontalOptions="Start"/>
+
+               </VerticalStackLayout>  
             </Frame>
 
             <Frame x:Name="frameWind"
                HeightRequest="80"
-               BackgroundColor="#556c7ca6"
+               BackgroundColor="#80000000"
                CornerRadius="20"
                VerticalOptions="Center"
                Grid.Row="1"
                Grid.Column="2"
                Margin="5">
+
+              <VerticalStackLayout>
+
+                  <Label Text="Vento"
+                         TextColor="White"
+                         FontSize="11"
+                         VerticalOptions="Start"
+                         HorizontalOptions="Center"
+                         FontAttributes="Bold"/>
+
+                  <Label Text="Força:"
+                         TextColor="White"
+                         FontSize="10"
+                         VerticalOptions="Center"
+                         HorizontalOptions="Start"/>
+
+                  <Label Text="Direção:"
+                         TextColor="White"
+                         FontSize="10"
+                         VerticalOptions="End"
+                         HorizontalOptions="Start"/>
+
+               </VerticalStackLayout>  
             </Frame>
 
             <Frame x:Name="frameMoon"
                HeightRequest="80"
-               BackgroundColor="#556c7ca6"
+               BackgroundColor="#80000000"
                CornerRadius="20"
                VerticalOptions="Center"
                Grid.Row="2"
                Grid.Column="2"
                Margin="5">
+
+              <VerticalStackLayout>
+
+                  <Label Text="Lua"
+                         TextColor="White"
+                         FontSize="11"
+                         VerticalOptions="Start"
+                         HorizontalOptions="Center"
+                         FontAttributes="Bold"/>
+
+                  <Label Text="Fase:"
+                         TextColor="White"
+                         FontSize="10"
+                         VerticalOptions="Center"
+                         HorizontalOptions="Start"/>
+
+
+               </VerticalStackLayout>  
             </Frame>
 
             <Frame x:Name="frameEnd"
                HeightRequest="140"
-               BackgroundColor="#556c7ca6"
+               BackgroundColor="#80000000"
                CornerRadius="20"
                HorizontalOptions="Fill"
                VerticalOptions="Fill"
