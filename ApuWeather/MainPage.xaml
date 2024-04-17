@@ -19,6 +19,11 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
+            <Image x:Name="Background"
+               Source="Sunny.jpg"
+               Aspect="AspectFill"
+               Grid.RowSpan="4"/>
+
 
             <Frame x:Name="frameTemp"
                HeightRequest="135"
@@ -69,6 +74,18 @@
                Grid.Column="2"
                Margin="5">
             </Frame>
+
+            <Frame x:Name="frameEnd"
+               HeightRequest="80"
+               BackgroundColor="#55acb0c2"
+               CornerRadius="20"
+               HorizontalOptions="Fill"
+               VerticalOptions="Fill"
+               Grid.Row="3"
+               Margin="5">
+            </Frame>
+
+
 
            
     </Grid>
