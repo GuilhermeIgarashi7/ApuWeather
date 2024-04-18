@@ -35,7 +35,7 @@
                Grid.RowSpan="2"
                Margin="10">
 
-                  <Label x:Name="Celsius"
+                  <Label x:Name="labelTemp"
                          TextColor="White"
                          FontSize="50"
                          VerticalOptions="Start"
@@ -49,6 +49,18 @@
                          HorizontalOptions="End"
                          FontAttributes="Bold"
                          Margin="15"/>
+
+                  <Label x:Name="labelSky"
+                         TextColor="White"
+                         FontSize="10"
+                         VerticalOptions="Center"
+                         HorizontalOptions="Start"/>
+
+                  <Label x:Name="labelCidade"
+                         TextColor="White"
+                         FontSize="10"
+                         VerticalOptions="End"
+                         HorizontalOptions="Start"/>
 
 
             </Frame>
@@ -77,7 +89,7 @@
                          VerticalOptions="Center"
                          HorizontalOptions="Start"/>
                
-                <Label x:Name="chuva"
+                <Label x:Name="labelChuva"
                          TextColor="White"
                          FontSize="10"
                          VerticalOptions="Center"
@@ -89,7 +101,7 @@
                          VerticalOptions="End"
                          HorizontalOptions="Start"/>
                
-                  <Label x:Name="humidade"
+                  <Label x:Name="labelHumidade"
                          TextColor="White"
                          FontSize="10"
                          VerticalOptions="End"
@@ -123,7 +135,7 @@
                          VerticalOptions="Center"
                          HorizontalOptions="Start"/>
 
-                 <Label x:Name="amanhecerhrs"
+                 <Label x:Name="labelAmanhecer"
                          TextColor="White"
                          FontSize="10"
                          VerticalOptions="Center"
@@ -135,7 +147,7 @@
                          VerticalOptions="End"
                          HorizontalOptions="Start"/> 
 
-                <Label x:Name="anoitecerhrs"
+                <Label x:Name="labelAnoitecer"
                          TextColor="White"
                          FontSize="10"
                          VerticalOptions="End"
@@ -168,7 +180,7 @@
                          VerticalOptions="Center"
                          HorizontalOptions="Start"/>
 
-                 <Label x:Name="forcaWind"
+                 <Label x:Name="labelForcaWind"
                          TextColor="White"
                          FontSize="10"
                          VerticalOptions="Center"
@@ -180,7 +192,7 @@
                          VerticalOptions="End"
                          HorizontalOptions="Start"/>
 
-                 <Label x:Name="direcaoWind"
+                 <Label x:Name="labelDirecaoWind"
                          TextColor="White"
                          FontSize="10"
                          VerticalOptions="End"
@@ -213,7 +225,7 @@
                          VerticalOptions="Center"
                          HorizontalOptions="Start"/>
 
-                 <Label x:Name="moonFase"
+                 <Label x:Name="labelMoonFase"
                          TextColor="White"
                          FontSize="10"
                          VerticalOptions="Center"
