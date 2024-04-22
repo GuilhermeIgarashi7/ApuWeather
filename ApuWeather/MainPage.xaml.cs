@@ -4,7 +4,9 @@ namespace ApuWeather;
 
 public partial class MainPage : ContentPage
 {
+	const string url ="https//:api.hgbrasil.com/weather?woeid=455926&key=576e0ce9";
 	Results Resultados;
+
 
 
 
