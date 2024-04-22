@@ -1,4 +1,5 @@
 ﻿using System.Reflection.Emit;
+using System.Text.Json;
 
 namespace ApuWeather;
 
@@ -6,6 +7,25 @@ public partial class MainPage : ContentPage
 {
 	const string url ="https//:api.hgbrasil.com/weather?woeid=455926&key=576e0ce9";
 	Results Resultados;
+
+	async void AttTempo()
+	{
+			try
+			{
+				var HttpClient = new HttpClient();
+				var Response = await HttpClient.GetAsync(url);
+				if (Response.IsSuccessStatusCode)
+					{
+						var content = await Response.Content.ReadAsStringAsync();
+						Resultados = JsonSerializer.Deserialize<Results>(content);
+
+					}
+			}
+			catch(Exception e)
+			{
+
+			}
+	}
 
 
 

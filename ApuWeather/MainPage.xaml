@@ -8,8 +8,8 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="170"/>
-            <RowDefinition Height="85"/>
-            <RowDefinition Height="85"/>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="120"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
@@ -27,7 +27,7 @@
 
 
             <Frame x:Name="frameTemp"
-               HeightRequest="170"
+               HeightRequest="220"
                BackgroundColor="#80000000"
                CornerRadius="20"
                VerticalOptions="Center"
@@ -35,44 +35,76 @@
                Grid.RowSpan="2"
                Margin="10">
 
+              <Grid>
+
+                  <Grid.RowDefinitions>
+                      <RowDefinition Height="55"/>
+                      <RowDefinition Height="55"/>
+                      <RowDefinition Height="55"/>
+                      <RowDefinition Height="55"/>
+                  </Grid.RowDefinitions>
+
+                  <Grid.ColumnDefinitions>
+                      <ColumnDefinition Width="55"/>
+                      <ColumnDefinition Width="*"/>
+                  </Grid.ColumnDefinitions>
+
+
                   <Label x:Name="labelTemp"
                          TextColor="White"
-                         FontSize="50"
+                         FontSize="40"
                          VerticalOptions="Start"
                          HorizontalOptions="Start"
                          FontAttributes="Bold"/>
 
-                  <Label Text="C"
+                  <Label Text="°C"
                          TextColor="White"
-                         FontSize="12"
-                         VerticalOptions="Start"
-                         HorizontalOptions="End"
+                         FontSize="20"
+                         VerticalOptions="End"
+                         HorizontalOptions="Start"
                          FontAttributes="Bold"
-                         Margin="15"/>
+                         Grid.Column="1"
+                         Grid.ColumnSpan="2"/>
 
                   <Label x:Name="labelSky"
                          TextColor="White"
-                         FontSize="10"
+                         FontSize="14"
                          VerticalOptions="Center"
-                         HorizontalOptions="Start"/>
+                         HorizontalOptions="Start"
+                         Grid.Row="1"
+                         Grid.ColumnSpan="2"/>
 
                   <Label x:Name="labelCidade"
                          TextColor="White"
-                         FontSize="10"
+                         FontSize="14"
                          VerticalOptions="End"
-                         HorizontalOptions="Start"/>
+                         HorizontalOptions="Start"
+                         Grid.Row="2"
+                         Grid.ColumnSpan="2"/>
+              
 
-
+              </Grid>
             </Frame>
 
             <Frame x:Name="frameRain"
-               HeightRequest="80"
+               HeightRequest="100"
                BackgroundColor="#80000000"
                CornerRadius="20"
                VerticalOptions="Center"
                Grid.Row="1"
                Grid.Column="1"
                Margin="5">
+
+              <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+              </Grid.RowDefinitions>
+
+              <Grid.ColumnDefinitions>
+                     <ColumnDefinition Width="40"/>
+                     <ColumnDefinition Width="*"/>
+              </Grid.ColumnDefinitions>
 
                <VerticalStackLayout>
 
@@ -81,19 +113,23 @@
                          FontSize="11"
                          VerticalOptions="Start"
                          HorizontalOptions="Center"
-                         FontAttributes="Bold"/>
+                         FontAttributes="Bold"
+                         Grid.ColumnSpan="2"/>
 
                   <Label Text="Chuva:"
                          TextColor="White"
                          FontSize="10"
                          VerticalOptions="Center"
-                         HorizontalOptions="Start"/>
+                         HorizontalOptions="Start"
+                         Grid.Row="1"/>
                
                 <Label x:Name="labelChuva"
                          TextColor="White"
                          FontSize="10"
                          VerticalOptions="Center"
-                         HorizontalOptions="End"/>
+                         HorizontalOptions="End"
+                         Grid.Row="1"
+                         Grid.Column="1"/>
 
                   <Label Text="Humidade:"
                          TextColor="White"
@@ -112,7 +148,7 @@
             </Frame>
 
             <Frame x:Name="frameSun"
-               HeightRequest="80"
+               HeightRequest="100"
                BackgroundColor="#80000000"
                CornerRadius="20"
                VerticalOptions="Center"
@@ -157,7 +193,7 @@
             </Frame>
 
             <Frame x:Name="frameWind"
-               HeightRequest="80"
+               HeightRequest="100"
                BackgroundColor="#80000000"
                CornerRadius="20"
                VerticalOptions="Center"
@@ -202,7 +238,7 @@
             </Frame>
 
             <Frame x:Name="frameMoon"
-               HeightRequest="80"
+               HeightRequest="100"
                BackgroundColor="#80000000"
                CornerRadius="20"
                VerticalOptions="Center"
@@ -236,7 +272,7 @@
             </Frame>
 
             <Frame x:Name="frameEnd"
-               HeightRequest="140"
+               HeightRequest="160"
                BackgroundColor="#80000000"
                CornerRadius="20"
                HorizontalOptions="Fill"
