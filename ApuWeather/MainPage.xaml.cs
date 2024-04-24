@@ -71,6 +71,8 @@ public partial class MainPage : ContentPage
 				labelDirecaoWind.Text= resposta.results.wind_direction;
 				labelMoonFase.Text= resposta.results.moon_phase;
 			}
+
+		void Background()
 	
 
 
