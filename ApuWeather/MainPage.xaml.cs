@@ -6,7 +6,8 @@ namespace ApuWeather;
 public partial class MainPage : ContentPage
 {
 	const string url ="https//:api.hgbrasil.com/weather?woeid=455926&key=576e0ce9";
-	Results Resultados;
+	Results results;
+	Resposta resposta;
 
 	async void AttTempo()
 	{
@@ -17,7 +18,8 @@ public partial class MainPage : ContentPage
 				if (Response.IsSuccessStatusCode)
 					{
 						var content = await Response.Content.ReadAsStringAsync();
-						Resultados = JsonSerializer.Deserialize<Results>(content);
+						resposta = JsonSerializer.Deserialize<Resposta>(content);
+						PreencherTela();
 
 					}
 			}
@@ -34,39 +36,40 @@ public partial class MainPage : ContentPage
 	{
 		InitializeComponent();
 
-		 Resultados = new Results();
 		 LayoutTest();
 		 PreencherTela();
+		 AttTempo();
 
 	}
+
 	
 		void LayoutTest()
 			{
-				Resultados.temp=21;
-				Resultados.description="Nublado";
-				Resultados.city="Apucarana-PR";
-				Resultados.rain=88.2;
-				Resultados.humidity=88.2;
-				Resultados.sunrise="6:22";
-				Resultados.sunset="18:44";
-				Resultados.wind_speedy=3;
-				Resultados.wind_direction="373 N";
-				Resultados.moon_phase="Nov";
+				resposta.temp=21;
+				resposta.description="Nublado";
+				resposta.city="Apucarana-PR";
+				resposta.rain=88.2;
+				resposta.humidity=88.2;
+				resposta.sunrise="6:22";
+				resposta.sunset="18:44";
+				resposta.wind_speedy=3;
+				resposta.wind_direction="373 N";
+				resposta.moon_phase="Nov";
 
 			}
 
 		void PreencherTela()
 			{
-				labelTemp.Text= Resultados.temp.ToString();
-				labelSky.Text= Resultados.description;
-				labelCidade.Text= Resultados.city;
-				labelChuva.Text= Resultados.rain.ToString();
-				labelHumidade.Text= Resultados.humidity.ToString();
-				labelAmanhecer.Text= Resultados.sunrise;
-				labelAnoitecer.Text= Resultados.sunset;
-				labelForcaWind.Text= Resultados.wind_speedy.ToString();
-				labelDirecaoWind.Text= Resultados.wind_direction;
-				labelMoonFase.Text= Resultados.moon_phase;
+				labelTemp.Text= resposta.results.temp.ToString();
+				labelSky.Text= resposta.results.description;
+				labelCidade.Text= resposta.results.city;
+				labelChuva.Text= resposta.results.rain.ToString();
+				labelHumidade.Text= resposta.results.humidity.ToString();
+				labelAmanhecer.Text= resposta.results.sunrise;
+				labelAnoitecer.Text= resposta.results.sunset;
+				labelForcaWind.Text= resposta.results.wind_speedy.ToString();
+				labelDirecaoWind.Text= resposta.results.wind_direction;
+				labelMoonFase.Text= resposta.results.moon_phase;
 			}
 	
 

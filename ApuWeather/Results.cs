@@ -1,5 +1,5 @@
 namespace ApuWeather;
-public class Results
+public class Results 
 {
 
 public int temp {get; set;}
