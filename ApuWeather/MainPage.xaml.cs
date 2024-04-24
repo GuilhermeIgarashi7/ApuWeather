@@ -70,9 +70,19 @@ public partial class MainPage : ContentPage
 				labelForcaWind.Text= resposta.results.wind_speedy.ToString();
 				labelDirecaoWind.Text= resposta.results.wind_direction;
 				labelMoonFase.Text= resposta.results.moon_phase;
+
+				if (resposta.currently=="dia")
+					{
+						if (resposta.rain>=10)
+							background.Source="rainyday";
+						else if (resposta.cloudiness>=10)
+							background.Source="cloudyday";
+						else
+							background.Source="sunny";
+					}
 			}
 
-		void Background()
+	
 	
 
 

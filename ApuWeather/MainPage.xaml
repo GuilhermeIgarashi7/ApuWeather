@@ -20,7 +20,6 @@
         </Grid.ColumnDefinitions>
 
             <Image x:Name="background"
-               Source="sunny.jpg"
                Aspect="AspectFill"
                Grid.RowSpan="4"
                Grid.ColumnSpan="3"/>
