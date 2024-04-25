@@ -2,13 +2,14 @@
 using System.Text.Json;
 
 namespace ApuWeather;
-
+//-----------------------------------------------------------------------------------------------------------------------------
 public partial class MainPage : ContentPage
 {
 	const string url ="https//:api.hgbrasil.com/weather?woeid=455926&key=576e0ce9";
-	Results results;
 	Resposta resposta;
 
+	
+//-----------------------------------------------------------------------------------------------------------------------------
 	async void AttTempo()
 	{
 			try
@@ -30,34 +31,35 @@ public partial class MainPage : ContentPage
 	}
 
 
-
+//-----------------------------------------------------------------------------------------------------------------------------
 
 	public MainPage()
 	{
 		InitializeComponent();
 
-		 LayoutTest();
-		 PreencherTela();
+
 		 AttTempo();
+
 
 	}
 
-	
+//-----------------------------------------------------------------------------------------------------------------------------
 		void LayoutTest()
 			{
-				resposta.temp=21;
-				resposta.description="Nublado";
-				resposta.city="Apucarana-PR";
-				resposta.rain=88.2;
-				resposta.humidity=88.2;
-				resposta.sunrise="6:22";
-				resposta.sunset="18:44";
-				resposta.wind_speedy=3;
-				resposta.wind_direction="373 N";
-				resposta.moon_phase="Nov";
+				resposta.results.temp=21;
+				resposta.results.description="Nublado";
+				resposta.results.city="Apucarana-PR";
+				resposta.results.rain=88.2;
+				resposta.results.humidity=88.2;
+				resposta.results.sunrise="6:22";
+				resposta.results.sunset="18:44";
+				resposta.results.wind_speedy=3;
+				resposta.results.wind_direction="373 N";
+				resposta.results.moon_phase="Nov";
 
 			}
 
+//-----------------------------------------------------------------------------------------------------------------------------
 		void PreencherTela()
 			{
 				labelTemp.Text= resposta.results.temp.ToString();
@@ -71,18 +73,27 @@ public partial class MainPage : ContentPage
 				labelDirecaoWind.Text= resposta.results.wind_direction;
 				labelMoonFase.Text= resposta.results.moon_phase;
 
-				if (resposta.currently=="dia")
+				if (resposta.results.currently=="dia")
 					{
-						if (resposta.rain>=10)
-							background.Source="rainyday";
-						else if (resposta.cloudiness>=10)
-							background.Source="cloudyday";
+						if (resposta.results.rain>=10)
+							imageBackground.Source="rainyday";
+						else if (resposta.results.cloudiness>=10)
+							imageBackground.Source="cloudyday";
 						else
-							background.Source="sunny";
+							imageBackground.Source="sunny";
+					}
+				else
+					{
+						if (resposta.results.rain>=10)
+							imageBackground.Source="rainynight";
+						else if (resposta.results.cloudiness>=10)
+							imageBackground.Source="cloudynight";
+						else
+							imageBackground.Source="night";
 					}
 			}
 
-	
+//-----------------------------------------------------------------------------------------------------------------------------
 	
 
 

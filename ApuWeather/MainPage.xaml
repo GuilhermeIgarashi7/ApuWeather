@@ -19,13 +19,14 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-            <Image x:Name="background"
+            <Image x:Name="imageBackground"
+               Source="night.jpg"
                Aspect="AspectFill"
                Grid.RowSpan="4"
                Grid.ColumnSpan="3"/>
 
 
-            <Frame x:Name="frameTemp"
+       <Frame x:Name="frameTemp"
                HeightRequest="220"
                BackgroundColor="#80000000"
                CornerRadius="20"
@@ -83,9 +84,9 @@
               
 
               </Grid>
-            </Frame>
+       </Frame>
 
-            <Frame x:Name="frameRain"
+       <Frame x:Name="frameRain"
                HeightRequest="100"
                BackgroundColor="#80000000"
                CornerRadius="20"
@@ -93,19 +94,19 @@
                Grid.Row="1"
                Grid.Column="1"
                Margin="5">
+               <Grid>
+                     <Grid.RowDefinitions>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="*"/>
+                     </Grid.RowDefinitions>
 
-              <Grid.RowDefinitions>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="30"/>
-              </Grid.RowDefinitions>
+                     <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="*"/>
+                     </Grid.ColumnDefinitions>
 
-              <Grid.ColumnDefinitions>
-                     <ColumnDefinition Width="40"/>
-                     <ColumnDefinition Width="*"/>
-              </Grid.ColumnDefinitions>
 
-               <VerticalStackLayout>
 
                   <Label Text="Chuva"
                          TextColor="White"
@@ -134,17 +135,17 @@
                          TextColor="White"
                          FontSize="10"
                          VerticalOptions="End"
-                         HorizontalOptions="Start"/>
+                         HorizontalOptions="Start"
+                         Grid.Row="2"/>
                
                   <Label x:Name="labelHumidade"
                          TextColor="White"
                          FontSize="10"
                          VerticalOptions="End"
-                         HorizontalOptions="End"/>
-
-               </VerticalStackLayout>  
-
-            </Frame>
+                         HorizontalOptions="End"
+                         Grid.Row="2"/>
+              </Grid>
+       </Frame>
 
             <Frame x:Name="frameSun"
                HeightRequest="100"
@@ -155,7 +156,7 @@
                Grid.Column="1"
                Margin="5">
 
-              <VerticalStackLayout>
+
 
                   <Label Text="Sol"
                          TextColor="White"
@@ -188,7 +189,7 @@
                          VerticalOptions="End"
                          HorizontalOptions="End"/>
 
-               </VerticalStackLayout>  
+   
             </Frame>
 
             <Frame x:Name="frameWind"
@@ -200,7 +201,7 @@
                Grid.Column="2"
                Margin="5">
 
-              <VerticalStackLayout>
+
 
                   <Label Text="Vento"
                          TextColor="White"
@@ -233,7 +234,7 @@
                          VerticalOptions="End"
                          HorizontalOptions="End"/>
 
-               </VerticalStackLayout>  
+
             </Frame>
 
             <Frame x:Name="frameMoon"
@@ -245,7 +246,7 @@
                Grid.Column="2"
                Margin="5">
 
-              <VerticalStackLayout>
+
 
                   <Label Text="Lua"
                          TextColor="White"
@@ -267,7 +268,7 @@
                          HorizontalOptions="End"/>
 
 
-               </VerticalStackLayout>  
+
             </Frame>
 
             <Frame x:Name="frameEnd"
