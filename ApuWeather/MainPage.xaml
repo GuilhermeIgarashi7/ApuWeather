@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ApuWeather.MainPage"
-             Shell.NavBarIsVisible="False">
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="Black">
 
 
     <Grid>
@@ -20,7 +21,7 @@
         </Grid.ColumnDefinitions>
 
             <Image x:Name="imageBackground"
-               Source="night.jpg"
+
                Aspect="AspectFill"
                Grid.RowSpan="4"
                Grid.ColumnSpan="3"/>
@@ -103,6 +104,7 @@
 
                      <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="30"/>
                             <ColumnDefinition Width="*"/>
                      </Grid.ColumnDefinitions>
 
@@ -120,8 +122,7 @@
                          TextColor="White"
                          FontSize="10"
                          VerticalOptions="Center"
-                         HorizontalOptions="Start"
-                         Grid.Row="1"/>
+                         HorizontalOptions="Start"/>
                
                 <Label x:Name="labelChuva"
                          TextColor="White"
@@ -136,14 +137,16 @@
                          FontSize="10"
                          VerticalOptions="End"
                          HorizontalOptions="Start"
-                         Grid.Row="2"/>
+                         Grid.Row="1"
+                         Grid.ColumnSpan="2"/>
                
                   <Label x:Name="labelHumidade"
                          TextColor="White"
                          FontSize="10"
                          VerticalOptions="End"
                          HorizontalOptions="End"
-                         Grid.Row="2"/>
+                         Grid.Row="1"
+                         Grid.Column="1"/>
               </Grid>
        </Frame>
 

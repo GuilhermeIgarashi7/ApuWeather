@@ -76,20 +76,20 @@ public partial class MainPage : ContentPage
 				if (resposta.results.currently=="dia")
 					{
 						if (resposta.results.rain>=10)
-							imageBackground.Source="rainyday";
+							imageBackground.Source="rainyday.jpg";
 						else if (resposta.results.cloudiness>=10)
-							imageBackground.Source="cloudyday";
+							imageBackground.Source="cloudyday.jpg";
 						else
-							imageBackground.Source="sunny";
+							imageBackground.Source="sunny.jpg";
 					}
 				else
 					{
 						if (resposta.results.rain>=10)
-							imageBackground.Source="rainynight";
+							imageBackground.Source="rainynight.jpg";
 						else if (resposta.results.cloudiness>=10)
-							imageBackground.Source="cloudynight";
+							imageBackground.Source="cloudynight.jpg";
 						else
-							imageBackground.Source="night";
+							imageBackground.Source="night.jpg";
 					}
 			}
 
