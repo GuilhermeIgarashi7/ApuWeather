@@ -94,23 +94,24 @@
                VerticalOptions="Center"
                Grid.Row="1"
                Grid.Column="1"
-               Margin="5">
+               Margin="5"
+               Padding="0">
                <Grid>
                      <Grid.RowDefinitions>
-                            <RowDefinition Height="40"/>
-                            <RowDefinition Height="30"/>
                             <RowDefinition Height="*"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
                      </Grid.RowDefinitions>
 
                      <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="40"/>
-                            <ColumnDefinition Width="30"/>
                             <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="25"/>
+                            <ColumnDefinition Width="25"/>
+                            <ColumnDefinition Width="25"/>
                      </Grid.ColumnDefinitions>
 
-
-
-                  <Label Text="Chuva"
+              <Label Text="Chuva"
                          TextColor="White"
                          FontSize="11"
                          VerticalOptions="Start"
@@ -118,35 +119,15 @@
                          FontAttributes="Bold"
                          Grid.ColumnSpan="2"/>
 
-                  <Label Text="Chuva:"
+              <Label Text="Chuva:"
                          TextColor="White"
-                         FontSize="10"
-                         VerticalOptions="Center"
+                         FontSize="8"
+                         VerticalOptions="End"
                          HorizontalOptions="Start"/>
-               
-                <Label x:Name="labelChuva"
-                         TextColor="White"
-                         FontSize="10"
-                         VerticalOptions="Center"
-                         HorizontalOptions="End"
-                         Grid.Row="1"
-                         Grid.Column="1"/>
 
-                  <Label Text="Humidade:"
-                         TextColor="White"
-                         FontSize="10"
-                         VerticalOptions="End"
-                         HorizontalOptions="Start"
-                         Grid.Row="1"
-                         Grid.ColumnSpan="2"/>
-               
-                  <Label x:Name="labelHumidade"
-                         TextColor="White"
-                         FontSize="10"
-                         VerticalOptions="End"
-                         HorizontalOptions="End"
-                         Grid.Row="1"
-                         Grid.Column="1"/>
+
+
+
               </Grid>
        </Frame>
 
