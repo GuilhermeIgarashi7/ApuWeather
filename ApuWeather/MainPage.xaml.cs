@@ -10,7 +10,18 @@ public partial class MainPage : ContentPage
 
 	
 //-----------------------------------------------------------------------------------------------------------------------------
-	async void AttTempo()
+
+	public MainPage()
+	{
+		InitializeComponent();
+
+
+		 AttTempo();
+
+
+	}
+//-----------------------------------------------------------------------------------------------------------------------------
+		async void AttTempo()
 	{
 			try
 			{
@@ -30,18 +41,6 @@ public partial class MainPage : ContentPage
 			}
 	}
 
-
-//-----------------------------------------------------------------------------------------------------------------------------
-
-	public MainPage()
-	{
-		InitializeComponent();
-
-
-		 AttTempo();
-
-
-	}
 
 //-----------------------------------------------------------------------------------------------------------------------------
 		void LayoutTest()
@@ -71,7 +70,10 @@ public partial class MainPage : ContentPage
 				labelAnoitecer.Text= resposta.results.sunset;
 				labelForcaWind.Text= resposta.results.wind_speedy.ToString();
 				labelDirecaoWind.Text= resposta.results.wind_direction;
-				labelMoonFase.Text= resposta.results.moon_phase;
+				if (resposta.results.moon_phase=="full")
+					labelMoonFase.Text = "Cheia";
+				else if (resposta.results.moon_phase=="new")
+					labelMoonFase.Text = "Nova";
 
 				if (resposta.results.currently=="dia")
 					{
