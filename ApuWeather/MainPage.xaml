@@ -114,16 +114,46 @@
               <Label Text="Chuva"
                          TextColor="White"
                          FontSize="11"
-                         VerticalOptions="Start"
+                         VerticalOptions="Center"
                          HorizontalOptions="Center"
                          FontAttributes="Bold"
+                         Grid.Column="1"
                          Grid.ColumnSpan="2"/>
 
               <Label Text="Chuva:"
                          TextColor="White"
-                         FontSize="8"
+                         FontSize="10"
                          VerticalOptions="End"
-                         HorizontalOptions="Start"/>
+                         HorizontalOptions="Start"
+                         Grid.ColumnSpan="3"
+                         Grid.Row="1"/>
+
+              <Label x:Name="labelChuva"
+                         TextColor="White"
+                         FontSize="10"
+                         VerticalOptions="End"
+                         HorizontalOptions="End"
+                         Grid.Column="1"
+                         Grid.ColumnSpan="1"/>
+              
+              <Label Text="Humidade:"
+                         TextColor="White"
+                         FontSize="10"
+                         VerticalOptions="End"
+                         HorizontalOptions="Start"
+                         Grid.Row="2"
+                         Grid.ColumnSpan="3"/>
+
+              <Label x:Name="labelHumidade"
+                         TextColor="White"
+                         FontSize="10"
+                         VerticalOptions="End"
+                         HorizontalOptions="End"
+                         Grid.Column="1"
+                         Grid.ColumnSpan="2"
+                         Grid.Row="2"/>
+
+              
 
 
 
@@ -131,141 +161,200 @@
               </Grid>
        </Frame>
 
-            <Frame x:Name="frameSun"
+       <Frame x:Name="frameSun"
                HeightRequest="100"
                BackgroundColor="#80000000"
                CornerRadius="20"
                VerticalOptions="Center"
                Grid.Row="2"
                Grid.Column="1"
-               Margin="5">
+               Margin="5"
+               Padding="0">
+               <Grid>
+                     <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                     </Grid.RowDefinitions>
 
+                     <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="25"/>
+                            <ColumnDefinition Width="25"/>
+                            <ColumnDefinition Width="25"/>
+                     </Grid.ColumnDefinitions>
 
-
-                  <Label Text="Sol"
+              <Label Text="Sol"
                          TextColor="White"
                          FontSize="11"
-                         VerticalOptions="Start"
+                         VerticalOptions="Center"
                          HorizontalOptions="Center"
-                         FontAttributes="Bold"/>
+                         FontAttributes="Bold"
+                         Grid.Column="1"
+                         Grid.ColumnSpan="2"/>
 
-                  <Label Text="Amanhecer:"
-                         TextColor="White"
-                         FontSize="10"
-                         VerticalOptions="Center"
-                         HorizontalOptions="Start"/>
-
-                 <Label x:Name="labelAmanhecer"
-                         TextColor="White"
-                         FontSize="10"
-                         VerticalOptions="Center"
-                         HorizontalOptions="End"/>
-
-                  <Label Text="Anoitecer:"
+              <Label Text="Amanhecer:"
                          TextColor="White"
                          FontSize="10"
                          VerticalOptions="End"
-                         HorizontalOptions="Start"/> 
+                         HorizontalOptions="Start"
+                         Grid.ColumnSpan="3"
+                         Grid.Row="1"/>
 
-                <Label x:Name="labelAnoitecer"
+              <Label x:Name="labelAmanhecer"
                          TextColor="White"
                          FontSize="10"
                          VerticalOptions="End"
-                         HorizontalOptions="End"/>
+                         HorizontalOptions="End"
+                         Grid.Column="1"
+                         Grid.ColumnSpan="1"/>
+              
+              <Label Text="Anoitecer:"
+                         TextColor="White"
+                         FontSize="10"
+                         VerticalOptions="End"
+                         HorizontalOptions="Start"
+                         Grid.Row="2"
+                         Grid.ColumnSpan="3"/>
 
-   
-            </Frame>
+              <Label x:Name="labelAnoitecer"
+                         TextColor="White"
+                         FontSize="10"
+                         VerticalOptions="End"
+                         HorizontalOptions="End"
+                         Grid.Column="1"
+                         Grid.ColumnSpan="2"
+                         Grid.Row="2"/>
 
-            <Frame x:Name="frameWind"
+              
+
+              </Grid>
+       </Frame>
+
+       <Frame x:Name="frameWind"
                HeightRequest="100"
                BackgroundColor="#80000000"
                CornerRadius="20"
                VerticalOptions="Center"
                Grid.Row="1"
                Grid.Column="2"
-               Margin="5">
+               Margin="5"
+               Padding="0">
+               <Grid>
+                     <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                     </Grid.RowDefinitions>
 
+                     <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="25"/>
+                            <ColumnDefinition Width="25"/>
+                            <ColumnDefinition Width="25"/>
+                     </Grid.ColumnDefinitions>
 
-
-                  <Label Text="Vento"
+              <Label Text="Vento"
                          TextColor="White"
                          FontSize="11"
-                         VerticalOptions="Start"
+                         VerticalOptions="Center"
                          HorizontalOptions="Center"
-                         FontAttributes="Bold"/>
+                         FontAttributes="Bold"
+                         Grid.Column="1"
+                         Grid.ColumnSpan="2"/>
 
-                 <Label Text="Força:"
-                         TextColor="White"
-                         FontSize="10"
-                         VerticalOptions="Center"
-                         HorizontalOptions="Start"/>
-
-                 <Label x:Name="labelForcaWind"
-                         TextColor="White"
-                         FontSize="10"
-                         VerticalOptions="Center"
-                         HorizontalOptions="End"/>
-
-                  <Label Text="Direção:"
+              <Label Text="Força:"
                          TextColor="White"
                          FontSize="10"
                          VerticalOptions="End"
-                         HorizontalOptions="Start"/>
+                         HorizontalOptions="Start"
+                         Grid.ColumnSpan="3"
+                         Grid.Row="1"/>
 
-                 <Label x:Name="labelDirecaoWind"
+              <Label x:Name="labelForcaWind"
                          TextColor="White"
                          FontSize="10"
                          VerticalOptions="End"
-                         HorizontalOptions="End"/>
+                         HorizontalOptions="End"
+                         Grid.Column="1"
+                         Grid.ColumnSpan="1"/>
+              
+              <Label Text="Direção:"
+                         TextColor="White"
+                         FontSize="10"
+                         VerticalOptions="End"
+                         HorizontalOptions="Start"
+                         Grid.Row="2"
+                         Grid.ColumnSpan="3"/>
 
+              <Label x:Name="labelDirecaoWind"
+                         TextColor="White"
+                         FontSize="10"
+                         VerticalOptions="End"
+                         HorizontalOptions="End"
+                         Grid.Column="1"
+                         Grid.ColumnSpan="2"
+                         Grid.Row="2"/>
 
-            </Frame>
+              
 
-            <Frame x:Name="frameMoon"
+              </Grid>
+       </Frame>
+
+      <Frame x:Name="frameMoon"
                HeightRequest="100"
                BackgroundColor="#80000000"
                CornerRadius="20"
                VerticalOptions="Center"
                Grid.Row="2"
                Grid.Column="2"
-               Margin="5">
+               Margin="5"
+               Padding="0">
+               <Grid>
+                     <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                     </Grid.RowDefinitions>
 
+                     <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="25"/>
+                            <ColumnDefinition Width="25"/>
+                            <ColumnDefinition Width="25"/>
+                     </Grid.ColumnDefinitions>
 
-
-                  <Label Text="Lua"
+              <Label Text="Lua"
                          TextColor="White"
                          FontSize="11"
-                         VerticalOptions="Start"
+                         VerticalOptions="Center"
                          HorizontalOptions="Center"
-                         FontAttributes="Bold"/>
+                         FontAttributes="Bold"
+                         Grid.Column="1"
+                         Grid.ColumnSpan="2"/>
 
-                  <Label Text="Fase:"
+              <Label Text="Fase:"
                          TextColor="White"
                          FontSize="10"
-                         VerticalOptions="Center"
-                         HorizontalOptions="Start"/>
+                         VerticalOptions="End"
+                         HorizontalOptions="Start"
+                         Grid.ColumnSpan="3"
+                         Grid.Row="1"/>
 
-                 <Label x:Name="labelMoonFase"
+              <Label x:Name="labelMoonFase"
                          TextColor="White"
                          FontSize="10"
-                         VerticalOptions="Center"
-                         HorizontalOptions="End"/>
+                         VerticalOptions="End"
+                         HorizontalOptions="End"
+                         Grid.Column="1"
+                         Grid.ColumnSpan="1"/>
+              
 
-
-
-            </Frame>
-
-            <Frame x:Name="frameEnd"
-               HeightRequest="160"
-               BackgroundColor="#80000000"
-               CornerRadius="20"
-               HorizontalOptions="Fill"
-               VerticalOptions="Fill"
-               Grid.Row="3"
-               Grid.ColumnSpan="3"
-               Margin="5">
-            </Frame>
-
+              </Grid>
+       </Frame>
 
 
            

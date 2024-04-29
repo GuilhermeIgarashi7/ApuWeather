@@ -64,8 +64,8 @@ public partial class MainPage : ContentPage
 				labelTemp.Text= resposta.results.temp.ToString();
 				labelSky.Text= resposta.results.description;
 				labelCidade.Text= resposta.results.city;
-				//labelChuva.Text= resposta.results.rain.ToString();
-				//labelHumidade.Text= resposta.results.humidity.ToString();
+				labelChuva.Text= resposta.results.rain.ToString();
+				labelHumidade.Text= resposta.results.humidity.ToString();
 				labelAmanhecer.Text= resposta.results.sunrise;
 				labelAnoitecer.Text= resposta.results.sunset;
 				labelForcaWind.Text= resposta.results.wind_speedy.ToString();
