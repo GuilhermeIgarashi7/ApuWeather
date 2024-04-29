@@ -41,23 +41,6 @@ public partial class MainPage : ContentPage
 			}
 	}
 
-
-//-----------------------------------------------------------------------------------------------------------------------------
-		void LayoutTest()
-			{
-				resposta.results.temp=21;
-				resposta.results.description="Nublado";
-				resposta.results.city="Apucarana-PR";
-				resposta.results.rain=88.2;
-				resposta.results.humidity=88;
-				resposta.results.sunrise="6:22";
-				resposta.results.sunset="18:44";
-				resposta.results.wind_speedy="3";
-				resposta.results.wind_direction=373;
-				resposta.results.moon_phase="Nov";
-
-			}
-
 //-----------------------------------------------------------------------------------------------------------------------------
 		void PreencherTela()
 			{
