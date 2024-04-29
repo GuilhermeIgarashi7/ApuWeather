@@ -20,8 +20,7 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-            <Image x:Name="imageBackground"
-
+            <Image x:Name="imagebackground"
                Aspect="AspectFill"
                Grid.RowSpan="4"
                Grid.ColumnSpan="3"/>
@@ -126,15 +125,16 @@
                          VerticalOptions="End"
                          HorizontalOptions="Start"
                          Grid.ColumnSpan="3"
-                         Grid.Row="1"/>
+                         Grid.Row="1"
+                         Margin="10,0,0,0"/>
 
               <Label x:Name="labelChuva"
                          TextColor="White"
                          FontSize="10"
                          VerticalOptions="End"
-                         HorizontalOptions="End"
+                         HorizontalOptions="Start"
                          Grid.Column="1"
-                         Grid.ColumnSpan="1"/>
+                         Grid.ColumnSpan="2"/>
               
               <Label Text="Humidade:"
                          TextColor="White"
@@ -142,7 +142,8 @@
                          VerticalOptions="End"
                          HorizontalOptions="Start"
                          Grid.Row="2"
-                         Grid.ColumnSpan="3"/>
+                         Grid.ColumnSpan="3"
+                         Margin="10,0,0,0"/>
 
               <Label x:Name="labelHumidade"
                          TextColor="White"
@@ -200,7 +201,8 @@
                          VerticalOptions="End"
                          HorizontalOptions="Start"
                          Grid.ColumnSpan="3"
-                         Grid.Row="1"/>
+                         Grid.Row="1"
+                         Margin="10,0,0,0"/>
 
               <Label x:Name="labelAmanhecer"
                          TextColor="White"
@@ -216,7 +218,8 @@
                          VerticalOptions="End"
                          HorizontalOptions="Start"
                          Grid.Row="2"
-                         Grid.ColumnSpan="3"/>
+                         Grid.ColumnSpan="3"
+                         Margin="10,0,0,0"/>
 
               <Label x:Name="labelAnoitecer"
                          TextColor="White"
@@ -271,7 +274,8 @@
                          VerticalOptions="End"
                          HorizontalOptions="Start"
                          Grid.ColumnSpan="3"
-                         Grid.Row="1"/>
+                         Grid.Row="1"
+                         Margin="10,0,0,0"/>
 
               <Label x:Name="labelForcaWind"
                          TextColor="White"
@@ -287,7 +291,8 @@
                          VerticalOptions="End"
                          HorizontalOptions="Start"
                          Grid.Row="2"
-                         Grid.ColumnSpan="3"/>
+                         Grid.ColumnSpan="3"
+                         Margin="10,0,0,0"/>
 
               <Label x:Name="labelDirecaoWind"
                          TextColor="White"
@@ -342,7 +347,8 @@
                          VerticalOptions="End"
                          HorizontalOptions="Start"
                          Grid.ColumnSpan="3"
-                         Grid.Row="1"/>
+                         Grid.Row="1"
+                         Margin="10,0,0,0"/>
 
               <Label x:Name="labelMoonFase"
                          TextColor="White"
@@ -356,6 +362,16 @@
               </Grid>
        </Frame>
 
+              <Frame x:Name="frameEnd"
+                            HeightRequest="160"
+                            BackgroundColor="#80000000"
+                            CornerRadius="20"
+                            HorizontalOptions="Fill"
+                            VerticalOptions="Fill"
+                            Grid.Row="3"
+                            Grid.ColumnSpan="3"
+                            Margin="5">
+              </Frame>
 
            
     </Grid>

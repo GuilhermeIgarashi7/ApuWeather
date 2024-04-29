@@ -5,7 +5,7 @@ namespace ApuWeather;
 //-----------------------------------------------------------------------------------------------------------------------------
 public partial class MainPage : ContentPage
 {
-	const string url ="https//:api.hgbrasil.com/weather?woeid=455926&key=576e0ce9";
+	const string url ="https://api.hgbrasil.com/weather?woeid=455927&key=576e0ce9";
 	Resposta resposta;
 
 	
@@ -31,13 +31,13 @@ public partial class MainPage : ContentPage
 					{
 						var content = await Response.Content.ReadAsStringAsync();
 						resposta = JsonSerializer.Deserialize<Resposta>(content);
+						
 						PreencherTela();
-
 					}
 			}
 			catch(Exception e)
 			{
-
+				System.Diagnostics.Debug.WriteLine(e);
 			}
 	}
 
@@ -49,11 +49,11 @@ public partial class MainPage : ContentPage
 				resposta.results.description="Nublado";
 				resposta.results.city="Apucarana-PR";
 				resposta.results.rain=88.2;
-				resposta.results.humidity=88.2;
+				resposta.results.humidity=88;
 				resposta.results.sunrise="6:22";
 				resposta.results.sunset="18:44";
-				resposta.results.wind_speedy=3;
-				resposta.results.wind_direction="373 N";
+				resposta.results.wind_speedy="3";
+				resposta.results.wind_direction=373;
 				resposta.results.moon_phase="Nov";
 
 			}
@@ -69,7 +69,7 @@ public partial class MainPage : ContentPage
 				labelAmanhecer.Text= resposta.results.sunrise;
 				labelAnoitecer.Text= resposta.results.sunset;
 				labelForcaWind.Text= resposta.results.wind_speedy.ToString();
-				labelDirecaoWind.Text= resposta.results.wind_direction;
+				labelDirecaoWind.Text= resposta.results.wind_direction.ToString();
 				if (resposta.results.moon_phase=="full")
 					labelMoonFase.Text = "Cheia";
 				else if (resposta.results.moon_phase=="new")
@@ -78,20 +78,20 @@ public partial class MainPage : ContentPage
 				if (resposta.results.currently=="dia")
 					{
 						if (resposta.results.rain>=10)
-							imageBackground.Source="rainyday.jpg";
+							imagebackground.Source="rainyday.jpg";
 						else if (resposta.results.cloudiness>=10)
-							imageBackground.Source="cloudyday.jpg";
+							imagebackground.Source="cloudyday.jpg";
 						else
-							imageBackground.Source="sunny.jpg";
+							imagebackground.Source="sunny.jpg";
 					}
 				else
 					{
 						if (resposta.results.rain>=10)
-							imageBackground.Source="rainynight.jpg";
+							imagebackground.Source="rainynight.jpg";
 						else if (resposta.results.cloudiness>=10)
-							imageBackground.Source="cloudynight.jpg";
+							imagebackground.Source="cloudynight.jpg";
 						else
-							imageBackground.Source="night.jpg";
+							imagebackground.Source="night.jpg";
 					}
 			}
 
