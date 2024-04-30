@@ -53,10 +53,34 @@ public partial class MainPage : ContentPage
 				labelAnoitecer.Text= resposta.results.sunset;
 				labelForcaWind.Text= resposta.results.wind_speedy.ToString();
 				labelDirecaoWind.Text= resposta.results.wind_direction.ToString();
+
 				if (resposta.results.moon_phase=="full")
 					labelMoonFase.Text = "Cheia";
+
 				else if (resposta.results.moon_phase=="new")
 					labelMoonFase.Text = "Nova";
+
+				else if (resposta.results.moon_phase=="waxing_crescent")
+					labelMoonFase.Text = "Lua Crescente";
+
+				else if (resposta.results.moon_phase=="first_quarter")
+					labelMoonFase.Text = "Quarto Crescente";
+
+				else if (resposta.results.moon_phase=="last_quarter")
+					labelMoonFase.Text = "Quarto Minguante";
+				
+				else if (resposta.results.moon_phase=="waxing_gibbous")
+					labelMoonFase.Text = "Gibosa Crescente";
+	
+				else if (resposta.results.moon_phase=="waxing_crescent")
+					labelMoonFase.Text = "Gibosa Minguante";
+		
+				else if (resposta.results.moon_phase=="waning_crescent")
+					labelMoonFase.Text = "Lua Minguante";
+			
+
+
+
 
 				if (resposta.results.currently=="dia")
 					{
