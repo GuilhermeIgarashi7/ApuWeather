@@ -100,6 +100,7 @@ public partial class MainPage : ContentPage
 						else
 							imagebackground.Source="night.jpg";
 					}
+			
 			}
 
 //-----------------------------------------------------------------------------------------------------------------------------

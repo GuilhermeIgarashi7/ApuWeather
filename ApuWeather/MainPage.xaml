@@ -5,6 +5,7 @@
              Shell.NavBarIsVisible="False"
              BackgroundColor="Black">
 
+       <!-- Esqueleto do Código -->
 
     <Grid>
         <Grid.RowDefinitions>
@@ -25,6 +26,9 @@
                Grid.RowSpan="4"
                Grid.ColumnSpan="3"/>
 
+              <!--  -->
+
+       <!-- Frame da Temperatura -->
 
        <Frame x:Name="frameTemp"
                HeightRequest="220"
@@ -84,7 +88,9 @@
               
               </Grid>
        </Frame>
-
+              <!--  -->
+              
+              <!-- Frame da Chuva -->
        <Frame x:Name="frameRain"
                HeightRequest="100"
                BackgroundColor="#80000000"
@@ -156,6 +162,10 @@
 
               </Grid>
        </Frame>
+
+              <!--  -->
+
+              <!-- Frame do Sol --> 
 
        <Frame x:Name="frameSun"
                HeightRequest="100"
@@ -229,6 +239,10 @@
 
               </Grid>
        </Frame>
+
+              <!--  -->
+
+              <!-- Frame do Vento -->  
 
        <Frame x:Name="frameWind"
                HeightRequest="100"
@@ -305,6 +319,10 @@
               </Grid>
        </Frame>
 
+              <!--  -->
+
+              <!-- Frame da Lua -->                
+
       <Frame x:Name="frameMoon"
                HeightRequest="100"
                BackgroundColor="#80000000"
@@ -361,6 +379,8 @@
               </Grid>
        </Frame>
 
+              <!--  -->
+
               <Frame x:Name="frameEnd"
                             HeightRequest="160"
                             BackgroundColor="#80000000"
@@ -370,8 +390,8 @@
                             Grid.Row="3"
                             Grid.ColumnSpan="3"
                             Margin="5">
-              </Frame>
 
-           
+              </Frame>
+              
     </Grid>
 </ContentPage>
