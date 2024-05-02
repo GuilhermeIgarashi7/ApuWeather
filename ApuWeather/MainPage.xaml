@@ -68,7 +68,7 @@
 
                   <Label x:Name="labelSky"
                          TextColor="White"
-                         FontSize="14"
+                         FontSize="12"
                          VerticalOptions="Center"
                          HorizontalOptions="Start"
                          Grid.Row="1"
@@ -350,12 +350,13 @@
 
               <Label x:Name="labelMoonFase"
                          TextColor="White"
-                         FontSize="10"
-                         VerticalOptions="End"
-                         HorizontalOptions="End"
+                         FontSize="9"
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center"
                          Grid.Row="1"
-                         Grid.Column="2"
-                         Grid.ColumnSpan="1"/>
+                         Grid.Column="1"
+                         Grid.ColumnSpan="2"
+                         Grid.RowSpan="2"/>
               
               </Grid>
        </Frame>
